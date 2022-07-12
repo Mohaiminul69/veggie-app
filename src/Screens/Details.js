@@ -55,13 +55,12 @@ export default function Details() {
         <View style={{ flexDirection: "row", marginTop: spacing[6] }}>
           <Pressable
             style={{ marginRight: spacing[2] }}
-            onPress={() => navigation.navigate("Details")}
+            onPress={() => alert("Added to Favorites")}
           >
             <View
               style={[
                 styles.buttons,
                 {
-                  backgroundColor: colors.white,
                   width: 78,
                   borderColor: colors.grey,
                   borderWidth: 1,
@@ -71,11 +70,11 @@ export default function Details() {
               <FontAwesome5 name="heart" size={24} color="grey" />
             </View>
           </Pressable>
-          <Pressable onPress={() => navigation.navigate("Details")}>
+          <Pressable style={{ flex: 1 }} onPress={() => alert("Added to curt")}>
             <View
               style={[
                 styles.buttons,
-                { backgroundColor: colors.paste, width: 250 },
+                { backgroundColor: colors.paste, flex: 1 },
               ]}
             >
               <Feather name="shopping-cart" size={24} color="white" />
@@ -98,7 +97,6 @@ export default function Details() {
 
 const styles = StyleSheet.create({
   bottomCard: {
-    // marginTop: 312,
     position: "absolute",
     top: 310,
     left: 0,
@@ -113,7 +111,6 @@ const styles = StyleSheet.create({
   buttons: {
     height: 56,
     borderRadius: 8,
-    // marginBottom: 20,
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
